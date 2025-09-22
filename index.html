@@ -858,7 +858,9 @@
     <script>
         let cart = JSON.parse(localStorage.getItem('cart')) || [];
 
-        const productsUrl = 'https://docs.google.com/spreadsheets/d/e/2PACX-1vTUwKkCP-utyR4uJzAuXrCr2div8FCqsTRN57HMLuY_a0BzuThRPn_ZkfymgPoElcPg5i6UsPEuvGGN/pub?gid=1169053887&single=true&output=csv';
+        // PEGA AQUÍ EL ENLACE QUE ACABAS DE GENERAR EN EL PASO 1
+        // Por ejemplo: 'https://docs.google.com/spreadsheets/d/e/2PACX-1vTUwKkCP-utyR4uJzAuXrCr2div8FCqsTRN57HMLuY_a0BzuThRPn_ZkfymgPoElcPg5i6UsPEuvGGN/pub?output=csv';
+        const productsUrl = 'TU_NUEVO_ENLACE_AQUÍ'; 
 
         const logoSinTaccUrl = 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR5T7nDfaM_05QQOmcKUhuZoU6CnTZt0Ig9bQ&s';
         const logoVeganoUrl = 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQrWh6bS_uu0DfLFB7tEsj4aojQqHJyzH8brQ&s';
@@ -1020,7 +1022,7 @@
                             if (fullDesc) {
                                 fullDesc.remove();
                                 shortDesc.style.display = 'block';
-                                leerMasBtn.innerHTML = '<i class="fas fa-plus"></i>';
+                                leerMasBtn.innerHTML = '<i class="fas fa-minus"></i>';
                             } else {
                                 const newFullDesc = document.createElement('span');
                                 newFullDesc.classList.add('descripcion-completa');
@@ -1399,5 +1401,3 @@
 </body>
 
 </html>
-
-
