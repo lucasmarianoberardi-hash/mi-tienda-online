@@ -1393,21 +1393,21 @@
                 totalItems += item.quantity;
             });
 
-            // Aplica la bonificación
-            let finalTotal = subtotal;
-            if (totalItems >= DISCOUNT_THRESHOLD) {
-                const discountAmount = subtotal * DISCOUNT_PERCENTAGE;
-                finalTotal = subtotal - discountAmount;
-                message += `\n*Subtotal: $${subtotal.toFixed(2)}\n`;
-                message += `*Bonificación (10%): -$${discountAmount.toFixed(2)}\n`;
-            }
+// Aplica la bonificación
+let finalTotal = subtotal;
+if (totalItems >= DISCOUNT_THRESHOLD) {
+    const discountAmount = subtotal * DISCOUNT_PERCENTAGE;
+    finalTotal = subtotal - discountAmount;
+    message += `\n*Subtotal: $${subtotal.toFixed(2)}\n`;
+    message += `*Bonificación (10%): -$${discountAmount.toFixed(2)}\n`;
+}
 
-            message += `\n*TOTAL: $${finalTotal.toFixed(2)}*\n\n`;
-            message += '¡Gracias!';
+message += `\n*TOTAL: $${finalTotal.toFixed(2)}*\n\n`;
+message += '¡Gracias!';
 
-            const whatsappUrl = `https://wa.me/XXXXXXXXXX?text=${encodeURIComponent(message)}`;
-            window.open(whatsappUrl, '_blank');
-        });
+const whatsappUrl = `https://wa.me/5491164708681?text=${encodeURIComponent(message)}`;
+window.open(whatsappUrl, '_blank');
+});
 
         // --- Lógica del Escáner QR ---
         const qrScannerContainer = document.getElementById('qr-scanner-container');
@@ -1468,3 +1468,4 @@
 </body>
 
 </html>
+
